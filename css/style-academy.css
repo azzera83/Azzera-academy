@@ -1,0 +1,205 @@
+/* =========================================================
+   AZZERA ACADEMY | CHARTE GRAPHIQUE DYNAMISME & AVENIR
+   ========================================================= */
+
+:root {
+    /* Le Orange "Système Apple" dynamique et premium */
+    --orange-academy: #FF9500; 
+    --gray-main: #2d2d2f; /* Gris légèrement plus profond pour contraster avec l'orange */
+    --gray-bg: #f5f5f7; /* Gris perle type Apple */
+    --white: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: var(--gray-main); background: var(--white); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+/* --- NAVIGATION CORPORATE FORCÉE (Hauteur identique à Protect) --- */
+.topbar-corporate {
+    background: #4c4c4c !important; /* Force la couleur */
+    height: 35px; /* Retrait du !important pour adaptation mobile */
+    padding: 0; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+}
+
+.topbar-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    align-items: center;
+}
+
+.topbar-links a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.topbar-links a:hover, .topbar-links a.active {
+    color: #FF9500 !important; /* Orange Academy */
+    text-shadow: 0 0 8px rgba(255, 149, 0, 0.6);
+}
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-flex {
+    height: 70px; /* Retrait du !important pour adaptation mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+
+.header-logo {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.logo a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.logo h1 { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: -0.5px; }
+.logo span { color: var(--orange-academy); }
+
+.main-nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+.main-nav a { text-decoration: none; color: var(--gray-main); font-weight: 600; font-size: 14px; transition: var(--transition); }
+.main-nav a:hover, .main-nav a.active { color: var(--orange-academy); }
+
+/* --- BOUTONS --- */
+.btn-primary-orange { 
+    background: var(--orange-academy); 
+    color: var(--white); 
+    padding: 18px 40px; 
+    border-radius: 40px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 15px;
+    transition: var(--transition); 
+    display: inline-block; 
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.2);
+    text-align: center;
+}
+.btn-primary-orange:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 25px rgba(255, 149, 0, 0.3); }
+
+/* --- HERO SECTION --- */
+.hero-section { padding: 130px 0; text-align: center; background: var(--white); }
+.hero-title { font-family: 'Montserrat', sans-serif; font-size: 52px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px; line-height: 1.1; }
+.hero-subtitle { color: #86868b; font-size: 19px; max-width: 750px; margin: 0 auto 40px auto; line-height: 1.6; }
+
+/* --- TITRES DE SECTIONS --- */
+.modern-heading { text-align: center; margin-bottom: 60px; }
+.heading-subtitle { display: block; color: var(--orange-academy); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; margin-bottom: 15px; }
+.section-heading { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: var(--gray-main); }
+
+/* --- CATALOGUE TUILES APPLE STORE (3 Colonnes) --- */
+.services-section { padding: 100px 0; background: var(--gray-bg); }
+.diploma-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.apple-tile { 
+    background: var(--white); 
+    padding: 50px 40px; 
+    border-radius: 28px;
+    text-align: left; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: var(--transition); 
+    display: flex;
+    flex-direction: column;
+}
+.apple-tile i { font-size: 3rem; color: var(--orange-academy); margin-bottom: 25px; display: block; }
+.apple-tile h4 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-bottom: 15px; color: var(--gray-main); line-height: 1.3; }
+.apple-tile p { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 30px; flex-grow: 1; }
+.apple-tile:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.link-arrow { color: var(--orange-academy); text-decoration: none; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* --- ESPACE CANDIDAT CONTRASTÉ --- */
+.candidat-section { background: #1d1d1f; color: var(--white); padding: 100px 0; text-align: center; }
+.candidat-section h3 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; color: var(--white); }
+.candidat-section p { color: #a1a1a6; font-size: 18px; max-width: 600px; margin: 0 auto 40px auto; }
+
+/* --- FOOTER COMPLIANCE --- */
+.legal-compliance { background: #151516; color: #fff; padding: 60px 0 40px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+.official-badge-container { display: flex; justify-content: center; margin-bottom: 40px; }
+.official-badge { 
+    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 16px; padding: 25px 30px; display: flex; align-items: center; gap: 25px; 
+    max-width: 850px; text-align: left; 
+}
+.badge-icon { font-size: 40px; color: var(--orange-academy); }
+.badge-title { color: var(--white); font-weight: 700; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
+.badge-numbers { color: #e5e5e7; font-size: 14px; margin-bottom: 5px; }
+.badge-numbers strong { color: var(--orange-academy); }
+.compliance-inner p { color: #6e6e73; font-size: 12px; margin-top: 20px; }
+
+/* --- ANIMATIONS FLUIDES --- */
+@keyframes smoothReveal { 0% { opacity: 0; transform: translateY(25px); } 100% { opacity: 1; transform: translateY(0); } }
+body { animation: smoothReveal 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.apple-tile { opacity: 0; animation: smoothReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; animation-delay: 0.2s; }
+.apple-tile:nth-child(2) { animation-delay: 0.3s; }
+.apple-tile:nth-child(3) { animation-delay: 0.4s; }
+
+/* =========================================================
+   RESPONSIVE DESIGN (Mobiles & Tablettes)
+   ========================================================= */
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    
+    /* Ajustement Top Bar */
+    .topbar-corporate { height: auto !important; padding: 10px 0 !important; }
+    .topbar-links { gap: 15px; flex-wrap: wrap; padding: 0 10px !important; }
+    .topbar-links a { font-size: 9px; }
+
+    /* Ajustement Header et Menu */
+    .header-flex { height: auto !important; flex-direction: column; gap: 15px; padding: 15px 10px; }
+    .logo a { flex-direction: column; gap: 5px; text-align: center; }
+    .logo img { max-height: 45px !important; }
+    .logo h1 { font-size: 18px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; padding-bottom: 5px; }
+    .main-nav a { font-size: 13px; }
+
+    /* Ajustement Textes Hero Section */
+    .hero-section { padding: 60px 0; }
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 15px; padding: 0 10px; }
+
+    /* Grille & Tuiles */
+    .services-section { padding: 60px 0; }
+    .diploma-grid { grid-template-columns: 1fr; gap: 20px; }
+    .apple-tile { padding: 30px 20px; }
+
+    /* Espace Candidat */
+    .candidat-section { padding: 60px 0; }
+    .candidat-section h3 { font-size: 1.8rem; }
+    .candidat-section p { font-size: 15px; padding: 0 10px; }
+
+    /* Boutons pleine largeur sur mobile */
+    .btn-primary-orange { display: block; width: 100%; margin-bottom: 15px; box-sizing: border-box; text-align: center; }
+
+    /* Footer & Badge */
+    .official-badge { flex-direction: column; text-align: center; gap: 15px; padding: 20px; }
+    .legal-compliance { padding: 40px 0 20px 0; }
+}
